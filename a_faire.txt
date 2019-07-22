@@ -1,0 +1,24 @@
+Liste de ce qui a été fait et de ce qu'il faut faire avec des deadline
+
+
+A faire
+
+Site
+	set up formulaire inscription (html)		28/07
+	mise en forme de la page profile		28/07
+
+	lien URL entre les page via (necessite JAVA)
+
+Base de donnée
+	trouver comment doivent etre indexé les cours	28/07
+		(comme "primary key" ou "unique index" ou juste comme categorie)
+
+	trouver comment appeler les cours dans une recherche
+
+Python
+	Aucune idee de comment on fait
+
+Autre
+	trouver un meilleur rétroplaning que ça
+	procéder à l'élection d'un(e) chef(e) (moi je vote Vanessa)
+	DORMIR						dès ce soir
