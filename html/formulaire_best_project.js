@@ -33,3 +33,33 @@ function selection_niveau_chimie() {
         document.getElementById("container_chimie").style.visibility="hidden";
     }
 }
+
+function verif_formulaire() {
+    // definit un RegExp pour le telephone
+    var Regegex_tel = new RegExp("^(0|\\+33|0033)[1-9][0-9]{8}$")
+    if (Regegex_tel.test(document.getElementById("tel").value)) {
+        document.getElementById("numero_incorrect").style.visibility="hidden";
+    } else {document.getElementById("numero_incorrect").style.visibility="visible";}
+    // affiche le message d'erreur du tel
+    
+    var Regegex_mail = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$")
+    if ((Regegex_mail.test(document.getElementById("email").value)) || (document.getElementById("email").value === null)) {
+        document.getElementById("email_incorrect").style.visibility="hidden";
+    } else {document.getElementById("email_incorrect").style.visibility="visible";}
+    // le || permet de faire un OR? bref ça marche pas si l'email est vide
+    
+// pour le mot de passe je verifie qu'il y ai 1 minuscule (score_pass + 1), 1 majuscule, 1 nombre et 8 caractères    
+    score_pass=0
+    var pass = document.getElementById('pass').value
+    if (pass.includes([a-z]))
+        score_pass +=1
+    if (pass.includes([A-Z]))
+        score_pass +=1
+    if (pass.includes([0-9]))
+        score_pass +=1
+    if (pass.lenght >=7)
+        score_pass +=1
+    if (score_pass = 4){
+        document.getElementById("password_incorrect").style.visibility="hidden";
+    } else {document.getElementById("password_incorrect").style.visibility="visible";}
+}
