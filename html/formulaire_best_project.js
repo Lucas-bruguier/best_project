@@ -50,16 +50,25 @@ function verif_formulaire() {
     
 // pour le mot de passe je verifie qu'il y ai 1 minuscule (score_pass + 1), 1 majuscule, 1 nombre et 8 caractères    
     score_pass=0
-    var pass = document.getElementById('pass').value
-    if (pass.includes([a-z]))
+    var pass = document.getElementById("pass").value
+    if (pass.match(/[a-z]/)){
         score_pass +=1
-    if (pass.includes([A-Z]))
+    }if (pass.match(/[A-Z]/)){
         score_pass +=1
-    if (pass.includes([0-9]))
+    }if (pass.match(/[0-9]/)){
         score_pass +=1
-    if (pass.lenght >=7)
+    }if (pass.length > 7){
         score_pass +=1
-    if (score_pass = 4){
+    }
+    if (score_pass == 4){
         document.getElementById("password_incorrect").style.visibility="hidden";
     } else {document.getElementById("password_incorrect").style.visibility="visible";}
+
+    d1= new Date()
+    d2= new Date(document.querySelector('input[type="date"]').value)
+    if (Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) < 18 ||Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) >100) {
+        document.getElementById("age_incorrect").style.visibility="visible";
+    } else {
+        document.getElementById("age_incorrect").style.visibility="hidden";
+    }
 }
