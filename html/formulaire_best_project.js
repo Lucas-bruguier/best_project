@@ -49,13 +49,13 @@ function verif_formulaire() {
     // affiche le message d'erreur du tel
     
     var Regegex_mail = new RegExp("^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]{2,}\.[a-z]{2,4}$")
-    if ((Regegex_mail.test(document.getElementById("email").value)) || (document.getElementById("email").value === null)) {
+    if ((Regegex_mail.test(document.getElementById("email").value)) || (document.getElementById("email").value.length === 0)) {
         document.getElementById("email_incorrect").style.visibility="hidden";
     } else {
         document.getElementById("email_incorrect").style.visibility="visible";
         erreur +=1;
     }
-    // le || permet de faire un OR? bref ça marche pas si l'email est vide
+    // le || permet de faire un OR; je test la longueyr de la chaine email et si elle est nulle alors cela veux dire qu'il n'y a pas d'email renseigné -->ok
     
 // pour le mot de passe je verifie qu'il y ai 1 minuscule (score_pass + 1), 1 majuscule, 1 nombre et 8 caractères    
     score_pass=0
@@ -76,12 +76,14 @@ function verif_formulaire() {
         erreur +=1;
     }
 //donc si le score final est =4 c'est que toutes les conditions sont respectées
+//si on veux je peux assigner une lettre à chaque erreur et ainsi afficher quelle erreur l'utilisateur a fait
 
 
 // on calcule le nombre d'année d'écart et on affiche le message d'erreur (la division sert à transformer la difference en seconde en difference en année)
+// j'ai mis <17 car sinon toute l'année des 18 part aussi (je crois)  
     d1= new Date()
     d2= new Date(document.querySelector('input[type="date"]').value)
-    if (Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) < 18 ||Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) >100) {
+    if (Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) < 17 ||Number((d1.getTime() - d2.getTime()) / 31536000000).toFixed(0) >100) {
         document.getElementById("age_incorrect").style.visibility="visible";
         erreur +=1;
     } else {
