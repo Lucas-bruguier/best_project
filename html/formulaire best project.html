@@ -23,7 +23,7 @@
 
                 <br />                
                 <label for="pseudo">Votre pseudo :</label>
-                <input type="text" name="pseudo" id="pseudo" placeholder="Ex : exemple" maxlength="10" required/>
+                <input type="text" name="pseudo" id="pseudo" placeholder="Ex : Jean-jean" maxlength="10" required/>
         <!-- permet d'entrer le pseudo avec un exemple (placeholder), une taille max de 10 caractères et un caractère obligatoire (required)-->
         <!--il est conseillé sur internet de nommer à la foix un id et un name (ici c'est pareil mais dans le cas de liste ca ne l'est pas-->
 
@@ -101,8 +101,8 @@
             </fieldset>
 <!--il doit y avoir un moyen de faire un template pour ne pas avoir à répéter les liste déroulantes-->
         
-            <fieldset><TEXTAREA name="presentation" id="presentation" rows=4 cols=40>présentez vous</TEXTAREA></fieldset>
-<!--le bouton accepter les conditions permet aussi de checl la validité du fonrmulaire-->
+            <fieldset><TEXTAREA name="presentation" id="presentation" rows=4 cols=40 placeholder= "Présentez vous en quelques lignes !" </TEXTAREA></fieldset>
+<!--le bouton accepter les conditions permet aussi de checker la validité du formulaire-->
             <br>
             <input type="checkbox" name="verification" id="verification" onclick="verif_formulaire();"/> <label for="verification">J'accepte les conditions d'utilisations</label>
             <br /><input type="submit" name= "bouton_d_envoie" id="bouton_d_envoie" value="Envoyer" value="Disabled" disabled/>
