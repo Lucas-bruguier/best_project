@@ -1,14 +1,45 @@
 /*page d'accueil */
 
 
-body {
-
-    background-color : rgba(168, 170, 172, 0.432);
-    font-family: 'Gill Sans';
+.accueil {
+    font-family: 'Oxygen', sans-serif;
+    background-image: url("teach.jpg");
+    background-size : 100%; 
+    background-repeat: no-repeat;
     
 }
 
+.trait{
+    margin: 10px auto;
+    width: 20%;
+    height: 1px;
+    background-color:orange;
+    border: none; /* supprimer le style par défaut */
+} 
+
+
+.formulaire{
+    font-family: 'Oxygen', sans-serif;
+    background-image: url("cours.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#monform{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px; /* A toi de donner la bonne largeur */
+    height:80px; /* A toi de donner la bonne hauteur */
+    margin-left:-150px; /* -largeur/2 */
+    margin-top:-100px; /* -hauteur/2 */
+     }
+}
   
+
+
+
+
 .navigation {
     
     font-family: 'Oxygen', sans-serif;
@@ -17,7 +48,7 @@ body {
     letter-spacing: 2px;
     margin: 0;
 
-    text-transform: uppercase;
+
     text-align: center;
     color : #CFD2D6
     
@@ -45,23 +76,54 @@ header{
 legend {
     text-transform : uppercase;
     display: inline-box;
-    color: rgb(25, 103, 155)
+    color: rgb(25, 103, 155);
+    font-size: 1.4em;
+	margin-bottom: 10px;
 }
 
 fieldset{
     text-align : justify;
     padding:0 20px 20px 20px;
-    margin-bottom:10px;
-    border:5px solid rgb(0, 1, 7);
+    margin-bottom:5px; /*espace entre les 2 champs de formulaire*/
+    border: none;
+    background-color:gainsboro;
+    font-size: x-large;
+    border-radius: 10px;
+    
+
+}
+
+input{
+    height: 30px;
+    width: 100%;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: beige; 
+   
+}
+
+.number{
+    background: #1abc9c;
+	color: #fff;
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	font-size: 0.8em;
+	margin-right: 4px;
+	line-height: 30px;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+	border-radius: 15px 15px 15px 0px;
 }
 
 label{
     display: inline-block;
 }
 
-input{
-    display: inline-block;
-}
+
+
+
+/* bouton envoyer */
 
 .button{
     cursor: pointer;
@@ -70,6 +132,7 @@ input{
     color: white;
     font-size: 20px;
     padding: 15px 20px;
+    position: relative;
 }
 
 .button:active {
@@ -80,4 +143,10 @@ input{
         
 .button:hover{
     background-color: rgb(4, 175, 61)
+}
+
+
+/* MAJUSCULES */
+.uppercase{
+text-transform: uppercase;
 }
