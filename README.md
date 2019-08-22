@@ -12,3 +12,6 @@ https://pad.datatransition.net/w/ajc-docker/
 
 LIEN DOCKER:
 https://pad.datatransition.net/w/ajc-docker/Exo1
+
+LIEN NOSQL:
+https://pad.datatransition.net/w/ajc-nosql
