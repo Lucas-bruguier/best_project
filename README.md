@@ -21,3 +21,6 @@ https://pad.datatransition.net/w/ajc-docker/add
 
 LIEN COURS BRANCH GIT:
 https://pad.datatransition.net/w/ajc-devops
+
+LIEN INSTALLATION ENV DE TRAVAIL:
+https://pad.datatransition.net/w/ajc-devops/Environnement%20de%20travail
