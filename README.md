@@ -15,3 +15,6 @@ https://pad.datatransition.net/w/ajc-docker/Exo1
 
 LIEN NOSQL:
 https://pad.datatransition.net/w/ajc-nosql
+
+LIEN CAS CLIENT TYPE:
+https://pad.datatransition.net/w/ajc-docker/add
